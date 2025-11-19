@@ -1,0 +1,17 @@
+/build/
+/bin/
+/obj/
+/out/
+dynoXOR
+dynoXOR.exe
+*.suo
+*.user
+*.vcxproj*
+*.pdb
+.DS_Store
+*.swp
+*.tmp
+*.log
+tests/*.exe
+tests/*.out
+
