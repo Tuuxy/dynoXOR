@@ -21,7 +21,7 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup build environment
         if: matrix.os == 'ubuntu-latest' || matrix.os == 'macos-latest'
@@ -43,7 +43,7 @@ jobs:
           dir
 
       - name: Upload binary artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: dynoXOR-${{ matrix.os }}
           path: dynoXOR${{ matrix.os == 'windows-latest' && '.exe' || '' }}
