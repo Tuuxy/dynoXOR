@@ -22,14 +22,12 @@ int main(int argc, char* argv[]) {
     bool generate{false};
     bool keyLog{false};
 
-    auto keyOpt = app.add_option(Constants::keyFlag, xorkey,
-                                 Constants::keyFlagDescription)
-                      ->required(false);
-    auto genOpt = app.add_flag(Constants::generateFlag, generate,
-                               Constants::generateFlagDescription)
-                      ->required(false);
-
     // Define CLI options and flags with descriptions, required flags set appropriately
+    app.add_option(Constants::keyFlag, xorkey, Constants::keyFlagDescription)
+        ->required(false);
+    app.add_flag(Constants::generateFlag, generate,
+                 Constants::generateFlagDescription)
+        ->required(false);
     app.add_option(Constants::fileFlag, filename,
                    Constants::fileFlagDescription)
         ->required(true);
