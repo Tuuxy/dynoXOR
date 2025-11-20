@@ -37,8 +37,10 @@ int main(int argc, char* argv[]) {
                  Constants::overwriteFlagDescription)
         ->required(false);
     app.add_flag(Constants::backupFlag, backup,
-                 Constants::backupFlagDescription)->required(false);
-    app.add_flag(Constants::logFlag, keyLog, Constants::logFlagDescription)->required(false);
+                 Constants::backupFlagDescription)
+        ->required(false);
+    app.add_flag(Constants::logFlag, keyLog, Constants::logFlagDescription)
+        ->required(false);
 
     try {
       app.parse(argc, argv);

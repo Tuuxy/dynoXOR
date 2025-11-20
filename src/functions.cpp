@@ -90,7 +90,8 @@ void verifyFile(const std::string& filename) {
   std::ifstream file(filename, std::ios::binary | std::ios::ate);
 
   if (!file.good()) {
-    throw std::runtime_error("Input file does not exist or cannot be read: " + filename);
+    throw std::runtime_error("Input file does not exist or cannot be read: " +
+                             filename);
   }
 
   // Get the size of the file by current position of the read pointer
