@@ -1,9 +1,9 @@
 #include <exception>
 #include <filesystem>
 #include <string>
-#include "CLI11.hpp"
-#include "constants.hpp"
-#include "functions.hpp"
+#include "../include/CLI11.hpp"
+#include "../include/constants.hpp"
+#include "../include/functions.hpp"
 
 int main(int argc, char* argv[]) {
 
@@ -37,8 +37,8 @@ int main(int argc, char* argv[]) {
                  Constants::overwriteFlagDescription)
         ->required(false);
     app.add_flag(Constants::backupFlag, backup,
-                 Constants::backupFlagDescription);
-    app.add_flag(Constants::logFlag, keyLog, Constants::logFlagDescription);
+                 Constants::backupFlagDescription)->required(false);
+    app.add_flag(Constants::logFlag, keyLog, Constants::logFlagDescription)->required(false);
 
     try {
       app.parse(argc, argv);
